@@ -1,2 +1,6 @@
 .DS_Store
 node_modules
+.parcel-cache
+localhost-cert.pem
+localhost-privkey.pem
+dist/
