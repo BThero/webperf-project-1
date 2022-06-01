@@ -21,7 +21,7 @@ app.use(compress());
 
 app.use(
 	serveStatic('dist', {
-		maxAge: '5s',
+		maxAge: '30d',
 		setHeaders: (res, path) => {
 			if (serveStatic.mime.lookup(path) === 'text/html') {
 				res.setHeader('Cache-Control', 'public, max-age=0');

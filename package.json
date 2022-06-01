@@ -19,6 +19,7 @@
 		"spdy": "^4.0.2"
 	},
 	"devDependencies": {
-		"parcel": "^2.6.0"
+		"parcel": "^2.6.0",
+		"sharp": "^0.29.3"
 	}
 }
