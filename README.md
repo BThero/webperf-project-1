@@ -7,6 +7,7 @@ Tools:
 3. Compression middleware for gzip
 4. ServeStatic middleware for serving all files in `dist/` folder
 5. JS script (`gen-filelist.mjs`) for fetching a list of all cachable files in `dist/` folder
+6. Service worker for PWA 
 
 I did not compress images directly since Parcel does it for me during build time.
 In the `<picture>` tag I just provided 3-4 different sources (mobile, tablet, desktop, large).
