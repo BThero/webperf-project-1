@@ -34,6 +34,10 @@ app.use(
 	serveStatic('dist', {
 		maxAge: '30d', // sets max-age cache property for all assets
 		setHeaders: (res, path) => {
+			if (path.endsWith('service-worker.js')) {
+				res.setHeader('Service-Worker-Allowed', '/');
+			}
+
 			if (serveStatic.mime.lookup(path) === 'text/html') {
 				res.setHeader('Cache-Control', 'public, max-age=0'); // sets max-age=0 for html only
 			}

@@ -6,7 +6,8 @@
 		"dev": "nodemon server.mjs",
 		"start:dist": "cross-env NODE_ENV=production node server.mjs",
 		"dev:dist": "cross-env NODE_ENV=production nodemon server.mjs",
-		"build": "parcel build src/index.html"
+		"build": "parcel build src/index.html && node gen-filelist.mjs > cachable.txt",
+		"list": "node gen-filelist.mjs > cachable.txt"
 	},
 	"dependencies": {
 		"compression": "^1.7.4",
