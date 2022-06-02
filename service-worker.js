@@ -1,7 +1,9 @@
 import fs from 'fs';
 
+// Reading and parsing all files to be cached
 const text = fs.readFileSync('cachable.txt', 'utf-8');
 const files = text.split('\n');
+
 const CACHE = 'cache-v1';
 
 // Add content to the cache when the service worker is installed.
@@ -22,10 +24,12 @@ self.addEventListener('fetch', (event) => {
 // Fetches the requested content from the cache.
 async function fetchFromCache(request) {
 	return caches.match(request).then((matching) => {
+		// If found in cache return it
 		if (matching) {
 			return matching;
 		}
 
+		// Otherwise fetch from server
 		return fetch(request);
 	});
 }

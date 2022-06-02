@@ -4,8 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Travell</title>
-		<script src="js/main.js" type="module"></script>
 		<link rel="stylesheet" href="css/combined.css" />
+
+		<!-- Preloading all fonts -->
+		<!-- crossorigin property is for fixing some issue (which I don't remember now) -->
 		<link
 			rel="preload"
 			href="/src/fonts/OpenSans/OpenSans-Bold.woff2"
@@ -482,9 +484,9 @@
 			</div>
 		</footer>
 
-		<script type="module" src="js/app.js"></script>
-		<script src="js/jquery.js"></script>
-		<script src="js/imagesloaded.js" type="module"></script>
+		<!-- <script type="module" src="js/app.js"></script> -->
+		<!-- <script src="js/jquery.js"></script> -->
+		<!-- <script src="js/imagesloaded.js" type="module"></script> -->
 		<script type="text/javascript">
 			/* <![CDATA[ */
 			var travell_js_settings = {
@@ -500,5 +502,7 @@
 			};
 			/* ]]> */
 		</script>
+		<!-- Contains all JS filed combined into one -->
+		<script type="module" src="js/combined.js"></script>
 	</body>
 </html>

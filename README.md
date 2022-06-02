@@ -1,3 +1,26 @@
+# Documentation on what I used
+
+Tools:
+
+1. Parcel for bundler
+2. Express for server-side stuff
+3. Compression middleware for gzip
+4. ServeStatic middleware for serving all files in `dist/` folder
+5. JS script (`gen-filelist.mjs`) for fetching a list of all cachable files in `dist/` folder
+
+I did not compress images directly since Parcel does it for me during build time.
+In the `<picture>` tag I just provided 3-4 different sources (mobile, tablet, desktop, large).
+For each of the sources I did `?as=webp&width=X` so Parcel can create that version of an asset for me.
+I did not tune the image quality or other parameters because it looks okay.
+
+`npm run build` is for building the project and serving all static files into `dist/` folder. Versioning and minifying is also automatically done by Parcel.
+
+`npm run list` is for running the `gen-filelist.mjs` script.
+
+Certificates for HTTPS were generated with a help of this website https://www.section.io/engineering-education/how-to-get-ssl-https-for-localhost/
+
+As far as I remember the password was 12345.
+
 # Weekly Project 1
 
 You’ve just been hired by a company which runs a travel blog. The website was created from scratch by the founder but now it has a bad performance score. Users are turning away and its dropped down to the second page on Google Search.
